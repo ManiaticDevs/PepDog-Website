@@ -1,0 +1,105 @@
+﻿@model PepDogWebsite.ViewModels.RegisterViewModel
+@{
+    ViewBag.Title = "ROBLOX Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<body>
+    <div id="Container">
+        <div id="Header">
+            <div id="Banner" style="background-color: lightsteelblue">
+                <a id="_ctl0_Image1" title="ROBLOX" href="https://web.archive.org/web/20061205220137/http://www.roblox.com/Default.aspx" blankurl="/Thumbs/Blank.ashx?x=267&amp;y=70" imageurl="/images/Logo_267_70.png" style="display:inline-block;BEHAVIOR:url(/web/20061205220137im_/http://www.roblox.com/UI/Image.htc);cursor:hand;"></a>
+            </div>
+        </div>
+        <div id="Body">
+            <div id="AlreadyRegistered">
+                <h3> Already Registered?</h3>
+                <p> If you have already registered your character but you still need to download the installer, go directly to <a id="_ctl0_cphRoblox_HyperLinkDownload" href="https://web.archive.org/web/20061205220137/http://www.roblox.com/Install/Default.aspx?ReturnUrl=%2fMP%2fDefault.aspx">download</a>. </p>
+                <p> If you just need to Log in, go to the <a id="_ctl0_cphRoblox_HyperLinkLogin" href="https://web.archive.org/web/20061205220137/http://www.roblox.com/Login/Default.aspx?ReturnUrl=%2fMP%2fDefault.aspx">Login</a> page. </p>
+                <p> ROBLOX will not share your email address with 3rd parties. See our <a href="javascript:readPrivacy()"> Privacy Policy</a> for details. </p>
+                <p>
+                    Registration does not provide any guarantees of service. See our <a id="_ctl0_cphRoblox_HyperLinkToS" href="javascript:readToS()">
+                        <u>Terms of Service</u>
+                    </a> and <a id="_ctl0_cphRoblox_HyperLinkEULA" href="javascript:readEULA()">
+                        <u>Licensing Agreement</u>
+                    </a> for details.
+                </p>
+            </div>
+            <div id="Registration">
+                @using (Html.BeginForm()) {
+                    <h3> Download and Play - Step 1 of 2</h3>
+                    <table style="margin-top: -10px;">
+                        <tr>
+                            <td>
+                                <div class="EnterUsername">
+                                    <h4> Choose a name for your ROBLOX character</h4>
+                                    <div class="UsernameRow">
+                                        <label>Character name:</label>
+                                        @Html.TextBoxFor(c => c.Name, new { tabindex = 1 })
+                                    </div>
+
+                                    <div class="Suggestion"> Use 3-20 alphanumeric characters: A-Z, a-z, 0-9, no spaces </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="EnterPassword">
+                                    <h4> Choose your ROBLOX password</h4>
+                                    <div class="PasswordRow">
+                                        <label>Password:</label>
+                                        @Html.PasswordFor(c => c.Password)
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="EnterPassword">
+                                    <div class="PasswordRow">
+                                        <label>Confirm password:</label>
+                                        @Html.PasswordFor(c => c.ConfirmPassword)
+                                    </div>
+                                    <div class="Suggestion"> 4-10 characters, no spaces </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="EnterEmail">
+                                    <h4> E-mail Address</h4>
+                                    <div class="EmailRow">
+                                        <label>E-mail Address:</label>
+                                        @Html.TextBoxFor(c => c.Email)
+                                    </div>
+                                    <div class="Suggestion"> This will allow you to recover a lost password </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="Confirm">
+                                    <input type="submit" tabindex="5" class="BigButton">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                }
+            </div>
+
+        </div>
+        <div id="Footer">
+            <hr>
+            <p class="Legalese">
+                ROBLOX, "Online Building Toy", characters, logos, names, and all related indicia are trademarks of <a id="_ctl0_rbxFooter_hlRobloxCorporation" href="https://web.archive.org/web/20061205220137/http://www.roblox.com/info/About.aspx">ROBLOX Corporation</a>, 2006. Patents pending. <br> Use of this site signifies your acceptance of the <a id="_ctl0_rbxFooter_hlTermsOfService" href="https://web.archive.org/web/20061205220137/http://www.roblox.com/info/TermsOfService.aspx">Terms and Conditions</a>. <br>
+                <a id="_ctl0_rbxFooter_hlPrivacyPolicy" href="https://web.archive.org/web/20061205220137/http://www.roblox.com/info/Privacy.aspx">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://web.archive.org/web/20061205220137/mailto:info@roblox.com">Contact Us</a> &nbsp;|&nbsp; <a id="_ctl0_rbxFooter_hlAboutRoblox" href="https://web.archive.org/web/20061205220137/http://www.roblox.com/info/About.aspx">About Us</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
