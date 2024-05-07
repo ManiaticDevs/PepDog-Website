@@ -13,7 +13,7 @@ namespace PepDogWebsite.Controllers {
 		}
 
         // GET: Security
-        public ActionResult Logon() {
+        public ActionResult Login() {
             return View();
         }
 
