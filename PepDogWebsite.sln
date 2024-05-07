@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PepDogWebsite", "PepDogWebsite\PepDogWebsite.csproj", "{527C841A-7F53-483F-8430-9FA709966293}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PepDogWebsite", "PepDogWebsite.csproj", "{B443F764-347A-4AA7-8AEA-36181398A692}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{527C841A-7F53-483F-8430-9FA709966293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{527C841A-7F53-483F-8430-9FA709966293}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{527C841A-7F53-483F-8430-9FA709966293}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{527C841A-7F53-483F-8430-9FA709966293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B443F764-347A-4AA7-8AEA-36181398A692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B443F764-347A-4AA7-8AEA-36181398A692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B443F764-347A-4AA7-8AEA-36181398A692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B443F764-347A-4AA7-8AEA-36181398A692}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {99DDC7FE-AD1D-473B-82E5-224BCEAC98E7}
+		SolutionGuid = {F8398755-2E4F-4952-AB2F-B6E44C151002}
 	EndGlobalSection
 EndGlobal
