@@ -1,8 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var pageName = ViewContext.RouteData.Values["controller"].ToString();
+}
 
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" id="www-roblox-com">
 <head>
-    <link id="_ctl0_Favicon" rel="Shortcut Icon" type="image/ico" href="~/Content/images/roblox.ico">
+    <link id="_ctl0_Favicon" rel="Shortcut Icon" type="image/ico" href="~/Content/images/roblox.ico" />
 
     <link href="~/Content/css/Badges.css" rel="stylesheet" />
     <link href="~/Content/css/banner-styles.css" rel="stylesheet" />
@@ -21,18 +24,87 @@
     <link href="~/Content/css/Toolbox.css" rel="stylesheet" />
     <link href="~/Content/css/User.css" rel="stylesheet" />
 
-    <meta name="author" content="ROBLOX Corporation">
-    <meta name="description" content="ROBLOX is SAFE for kids! ROBLOX is a FREE casual virtual world with fully constructible/desctructible environments and immersive physics. Build, battle, chat, or just hang out.">
-    <meta name="keywords" content="game, video game, building game, contstruction game, online game, LEGO game, LEGO, MMO, MMORPG, virtual world, avatar chat">
-    <meta name="robots" content="all">
+    <meta name="author" content="ROBLOX Corporation" />
+    <meta name="description" content="ROBLOX is SAFE for kids! ROBLOX is a FREE casual virtual world with fully constructible/desctructible environments and immersive physics. Build, battle, chat, or just hang out." />
+    <meta name="keywords" content="game, video game, building game, contstruction game, online game, LEGO game, LEGO, MMO, MMORPG, virtual world, avatar chat" />
+    <meta name="robots" content="all" />
 
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 
 </head>
+
 <body>
-    <div>
-        @RenderBody()
+    <div id="Container">
+        <div id="Header">
+
+
+            <div id="Banner">
+
+
+                @if (pageName.Equals("Security") == false) {
+                    <div id="Authentication">
+                        @if (Session["username"] == null) {
+                            <span><a href="/Security/Login">Log In</a></span>
+                        } else {
+                            <span><a href="/">Logged in as @Session["username"]</a> | @Html.ActionLink("Logout", "Logout", "Security", null, null)</span>
+                        }
+                    </div>
+                }
+                @if (pageName.Equals("Security") == false) {
+                    <div id="Alerts">
+                        <a href="/">
+                            @if (Session["username"] == null) {
+                                <img src="~/Content/images/SignupBanner.png" alt="Sign-up and Play!" border="0" />
+                            }
+                        </a>
+                    </div>
+                }
+                <div id="Home">
+                    <a class="BannerText" href="https://web.archive.org/web/20070202003743/http://www.roblox.com/Default.aspx">ROBLOX Home</a>
+                </div>
+                @if (pageName.Equals("Security") == false) {
+                    <div id="Logo">
+                        <a title="ROBLOX" href="/" style="display:inline-block;">
+                            <img src="@Url.Content("~/Content/images/logo.png")" />
+                        </a>
+                    </div>
+                }
+            </div>
+            @if (pageName.Equals("Security") == false) {
+                <div id="Navigation">
+                    <span><a class="MenuItem" href="/">My ROBLOX</a></span>
+                    <span class="Separator"> | </span>
+                    <span><a class="MenuItem" href="/">Games</a></span>
+                    <span class="Separator">&nbsp;|&nbsp;</span>
+                    <span><a id="ctl00_hlBrowse" class="MenuItem" href="https://web.archive.org/web/20070202003743/http://www.roblox.com/Browse.aspx">Browse</a></span>
+                    <span class="Separator">&nbsp;|&nbsp;</span>
+                    <span id="ctl00_BadgesMenuItem"><a id="ctl00_hlBadges" class="MenuItem" href="https://web.archive.org/web/20070202003743/http://www.roblox.com/Badges.aspx">Badges</a></span>
+                    <span id="ctl00_BadgesMenuItemSeparator" class="Separator">&nbsp;|&nbsp;</span>
+                    <span><a id="ctl00_hlForum" class="MenuItem" href="https://web.archive.org/web/20070202003743/http://www.roblox.com/Forum/Default.aspx">Forum</a></span>
+                    <span class="Separator">&nbsp;|&nbsp;</span>
+                    <span><a id="ctl00_hlNews" class="MenuItem" href="https://web.archive.org/web/20070202003743/http://blog.roblox.com/" target="_blank">News</a>&nbsp;<a id="ctl00_hlNewsFeed" href="https://web.archive.org/web/20070202003743/http://blog.roblox.com/?feed=rss"><img src="~/Content/images/feed-icon-14x14.png" border="0" /></a></span>
+                    <span class="Separator">&nbsp;|&nbsp;</span>
+                    <span><a id="ctl00_hlHelp" class="MenuItem" href="https://web.archive.org/web/20070202003743/http://wiki.roblox.com/" target="_blank">Help</a></span>
+                    <span></span>
+                </div>
+            }
+
+
+        </div>
+        <div id="Body">
+            @RenderBody()
+        </div>
+        <div id="Footer">
+
+            <hr />
+            <p class="Legalese">
+                ROBLOX, "Online Building Toy", characters, logos, names, and all related indicia are trademarks of <a href="https://web.archive.org/web/20070202003743/http://www.roblox.com/info/About.aspx">ROBLOX Corporation</a>, ©2007.  Patents pending.<br />
+                Use of this site signifies your acceptance of the <a href="https://web.archive.org/web/20070202003743/http://www.roblox.com/info/TermsOfService.aspx">Terms and Conditions</a>.<br />
+                <a href="https://web.archive.org/web/20070202003743/http://www.roblox.com/info/Privacy.aspx">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://web.archive.org/web/20070202003743/mailto:info@roblox.com">Contact Us</a> &nbsp;|&nbsp; <a id="ctl00_Footer1_hlAboutRoblox" href="https://web.archive.org/web/20070202003743/http://www.roblox.com/info/About.aspx">About Us</a>
+            </p>
+
+        </div>
     </div>
 </body>
 </html>

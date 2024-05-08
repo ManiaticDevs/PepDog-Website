@@ -121,9 +121,8 @@ input.Text
 	width: 100%;
 	background-image: url(../images/banner2.png);
 	background-repeat: no-repeat;
-	border-bottom: solid 1px #000000;
-	border-left: solid 1px #000000;
-	border-right: solid 1px #000000;
+	margin-top:3px;
+	border: solid 1px #000000;
 	height: 72px;
 	text-align: center;
 }
@@ -148,15 +147,15 @@ input.Text
 
 #Banner #Logo
 {
-	float: left;
+	/*float: left;*/
 	margin: 3px 0 0 0;
 	text-align: center;
-	width: 300px;
+	/*width: 300px;*/
 }
 
 #Banner #Alerts
 {
-	clear: left;
+	/*clear: left;*/
 	float: right;
 	padding: 15px 15px 2px 4px;
 	text-align: right;
@@ -206,6 +205,8 @@ input.Text
 	font-weight: normal;
 	line-height: 2em;
 	text-decoration: none;
+	display:inline-block;
+	margin-top:-1px;
 }
 
 #Header #Navigation a:hover

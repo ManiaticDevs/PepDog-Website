@@ -1,0 +1,28 @@
+﻿@model List<PepDogWebsite.Models.Users>
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div style="text-align:center;width: 200px;margin: 0 auto;padding: 10px;position: relative;">
+        <h2>List of users</h2>
+        <table class="Grid" style="width:200px" cellspacing="0" cellpadding="4" border="0">
+            <thead>
+                <tr class="GridHeader">
+                    <th scope="col">Name</th>
+                    <th scope="col">Date Joined</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model) {
+                    <tr class="GridItem">
+                        <td align="left" style="text-align:center">@user.Name</td>
+                        <td style="text-align:center">@user.DateJoined</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</body>

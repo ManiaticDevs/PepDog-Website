@@ -1,7 +1,7 @@
 ﻿@model PepDogWebsite.ViewModels.RegisterViewModel
 @{
     ViewBag.Title = "ROBLOX | Register";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutSecurity.cshtml";
 }
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -10,7 +10,9 @@
     <div id="Container">
         <div id="Header">
             <div id="Banner" style="background-color: lightsteelblue">
-                <a id="_ctl0_Image1" title="ROBLOX" href="https://web.archive.org/web/20061205220137/http://www.roblox.com/Default.aspx" blankurl="/Thumbs/Blank.ashx?x=267&amp;y=70" imageurl="/images/Logo_267_70.png" style="display:inline-block;BEHAVIOR:url(/web/20061205220137im_/http://www.roblox.com/UI/Image.htc);cursor:hand;"></a>
+                <a title="ROBLOX" href="/" style="display:inline-block;">
+                    <img src="~/Content/images/logo.png"/>
+                </a>
             </div>
         </div>
         <div id="Body">

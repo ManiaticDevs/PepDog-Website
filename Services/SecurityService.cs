@@ -2,6 +2,7 @@
 using PepDogWebsite.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -18,13 +19,15 @@ namespace PepDogWebsite.Services {
 			userDetails.Email = model.Email;
 			userDetails.Name = model.Name;
 			userDetails.Password = model.Password;
+			userDetails.DateJoined = model.joined;
+			userDetails.LastOnline = model.joined;
 			_context.Users.Add(userDetails);
 			_context.SaveChanges();
 		}
 
 		public bool IsValidUser(LoginViewModel model) {
 			Users user = null;
-			user = _context.Users.SingleOrDefault(c => c.Email.Equals(model.Username) && c.Password.Equals(model.Password));
+			user = _context.Users.SingleOrDefault(c => c.Name.Equals(model.Username) && c.Password.Equals(model.Password));
 			return user != null;
 		}
 
@@ -35,6 +38,11 @@ namespace PepDogWebsite.Services {
 			} catch {
 				return false;
 			}
+		}
+
+		public List<Users> getUsersSet() {
+			IQueryable<Users> rtn = from temp in _context.Users select temp;
+			return rtn.ToList();
 		}
 	}
 }

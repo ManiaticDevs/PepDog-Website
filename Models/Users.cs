@@ -18,5 +18,7 @@ namespace PepDogWebsite.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public System.DateTime DateJoined { get; set; }
+        public System.DateTime LastOnline { get; set; }
     }
 }

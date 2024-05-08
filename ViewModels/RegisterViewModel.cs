@@ -19,6 +19,7 @@ namespace PepDogWebsite.ViewModels {
 		[StringLength(20, MinimumLength = 7, ErrorMessage = "Password was not equal!")]
 		[Compare("Password", ErrorMessage = "Password was not equal!")]
 		public string ConfirmPassword { get; set; }
+		public DateTime joined { get; set; }
 		public string Message { get; set; }
 
 	}
