@@ -14,12 +14,27 @@ namespace PepDogWebsite.Services {
 		}
 
 		public void SaveUserToDB(RegisterViewModel model) {
-			UserDetails userDetails = new UserDetails();
+			Users userDetails = new Users();
 			userDetails.Email = model.Email;
 			userDetails.Name = model.Name;
 			userDetails.Password = model.Password;
-			_context.UserDetails.Add(userDetails);
+			_context.Users.Add(userDetails);
 			_context.SaveChanges();
-		} 
+		}
+
+		public bool IsValidUser(LoginViewModel model) {
+			Users user = null;
+			user = _context.Users.SingleOrDefault(c => c.Email.Equals(model.Username) && c.Password.Equals(model.Password));
+			return user != null;
+		}
+
+		public bool IsValidEmailAddress(string email) {
+			try {
+				var emailChecked = new System.Net.Mail.MailAddress(email);
+				return true;
+			} catch {
+				return false;
+			}
+		}
 	}
 }

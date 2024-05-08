@@ -159,7 +159,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PepDogServerEntities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\UserDetails.cs">
+    <Compile Include="Models\Users.cs">
       <DependentUpon>PepDogServerEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -187,9 +187,13 @@
     <Content Include="Content\images\banner2.png" />
     <Content Include="Content\images\BattleIcon.png" />
     <Content Include="Content\images\BuildIcon.png" />
+    <Content Include="Content\images\bullet1.png" />
+    <Content Include="Content\images\bullet2.png" />
+    <Content Include="Content\images\bullet3.png" />
     <Content Include="Content\images\DownloadAndPlay.png" />
     <Content Include="Content\images\feed-icon-14x14.png" />
     <Content Include="Content\images\FriendsIcon.png" />
+    <Content Include="Content\images\missingno.png" />
     <Content Include="Content\images\roblox.ico" />
     <Content Include="Content\images\SignupBanner.png" />
     <Content Include="favicon.ico" />

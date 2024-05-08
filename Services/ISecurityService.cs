@@ -8,5 +8,8 @@ using System.Threading.Tasks;
 namespace PepDogWebsite.Services {
 	public interface ISecurityService {
 		void SaveUserToDB(RegisterViewModel model);
+		bool IsValidUser(LoginViewModel model);
+
+		bool IsValidEmailAddress(string email);
 	}
 }

@@ -12,7 +12,7 @@ namespace PepDogWebsite.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class UserDetails
+    public partial class Users
     {
         public int ID { get; set; }
         public string Name { get; set; }

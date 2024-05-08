@@ -25,6 +25,6 @@ namespace PepDogWebsite.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<UserDetails> UserDetails { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }
