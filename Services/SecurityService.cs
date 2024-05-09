@@ -40,7 +40,10 @@ namespace PepDogWebsite.Services {
 			}
 		}
 
-		public List<Users> getUsersSet() {
+		public Users GetUserFromID(int ID) {
+			return GetUsersSet().SingleOrDefault(x => x.ID.Equals(ID));
+		}
+		public List<Users> GetUsersSet() {
 			IQueryable<Users> rtn = from temp in _context.Users select temp;
 			return rtn.ToList();
 		}

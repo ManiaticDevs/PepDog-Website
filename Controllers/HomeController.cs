@@ -1,4 +1,5 @@
 ﻿using ActionParameterAlias;
+using PepDogWebsite.Models;
 using PepDogWebsite.Services;
 using PepDogWebsite.ViewModels;
 using System;
@@ -18,8 +19,18 @@ namespace PepDogWebsite.Controllers
             _service = service;
         }
 
+        public ActionResult User(int ID) {
+            Users user = _service.GetUserFromID(ID);
+            if(user != null) {
+				return View(_service.GetUserFromID(ID));
+			} else {
+                return RedirectToAction("Users", "Home");
+            }
+			
+		}
+
 		public ActionResult Users() {
-            return View(_service.getUsersSet());
+            return View(_service.GetUsersSet());
         }
 
         // GET: Home

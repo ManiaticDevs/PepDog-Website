@@ -17,7 +17,7 @@
             <tbody>
                 @foreach (var user in Model) {
                     <tr class="GridItem">
-                        <td align="left" style="text-align:center">@user.Name</td>
+                        <td align="left" style="text-align:center"><a href="/Home/User?ID=@user.ID"></a>@user.Name</td>
                         <td style="text-align:center">@user.DateJoined</td>
                     </tr>
                 }

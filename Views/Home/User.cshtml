@@ -1,0 +1,209 @@
+﻿@model PepDogWebsite.Models.Users
+@{
+    ViewBag.Title = "User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div id="UserContainer" style="display:flow-root;">
+        <div id="_ctl0_cphRoblox_pProfile">
+            <div id="ProfilePane">
+                <table width="100%" height="100%" bgcolor="lightsteelblue" cellpadding="6" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="Title">@Model.Name</span><br>
+                                <span class="UserOfflineMessage">[ Offline ]</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>@Model.Name's ROBLOX:</span><br>
+                                <a href="/Home/User?ID=@Model.ID">User?ID=@Model.ID</a><br>
+                                <br>
+                                <div style="LEFT: 0px; FLOAT: left; POSITION: relative; TOP: 0px">
+                                    <a title="Figure3" imageurl="/Thumbs/Model.ashx?x=180&amp;y=220&amp;id=2784&amp;format=Png" style="display:inline-block;"></a>
+                                </div>
+
+                                <p><a href="">Send Message</a></p>
+                                <p><a href="">Send Friend Request</a></p>
+                                <p><span>[erm what the smegma [no blurb yet]]</span></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="_ctl0_cphRoblox_pPrimaryPlace">
+
+            <div id="PrimaryPlacePane">
+
+
+                <table width="100%" height="100%" bgcolor="lightsteelblue" cellpadding="6" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="Title">some place i copyed from telamon</span><br>
+                                <span>
+                                    <span style="display:inline;">
+                                        <img src="./ROBLOX _ User_files/locked.png" border="0">&nbsp;Friends-only
+                                    </span>
+                                    <span style="display:none;">
+                                        <img src="./ROBLOX _ User_files/unlocked.png" border="0">&nbsp;Friends-only: You have access
+                                    </span>
+                                    <span style="display: none">
+                                        <img src="./ROBLOX _ User_files/public.png" border="0">&nbsp;Public
+                                    </span>
+                                    <label id="Offline" style="display: none">
+                                        <!-- Offline -->
+                                    </label>
+                                    <span id="Online" style="display: none">
+                                        <br>
+                                        <label id="PlayerCount">
+                                        </label>&nbsp;player(s) online&nbsp;&nbsp;<input name="_ctl0:cphRoblox:rbxPrimaryPlace:GameSessionStatus1:ButtonShutDown" type="button" value="Shut Down" style="display:none;">
+                                    </span>
+                                </span>
+
+                                <script type="text/javascript">
+                                    function updateGameStatus__ctl0_cphRoblox_rbxPrimaryPlace_GameSessionStatus1() {
+                                        requestGameStatus__ctl0_cphRoblox_rbxPrimaryPlace_GameSessionStatus1('', _ctl0_cphRoblox_rbxPrimaryPlace_GameSessionStatus1_Status);
+                                        window.setTimeout(updateGameStatus__ctl0_cphRoblox_rbxPrimaryPlace_GameSessionStatus1, 10000);
+                                    }
+                                    window.setTimeout(updateGameStatus__ctl0_cphRoblox_rbxPrimaryPlace_GameSessionStatus1, 100);</script>
+
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <a disabled="disabled" title="some place i copyed from telamon" onclick="return false" style="display:inline-block;"><img src="./ROBLOX _ User_files/Level.ashx" border="0"></a>
+                                </p>
+                                <div>
+                                    <span>
+                                        Dragon Ball Z Episodes 8 - 14 Saiyan Saga Dragonball Part 2
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <script type="text/javascript">
+                    if (!isIDE()) {
+                        var e = document.getElementById("_ctl0_cphRoblox_rbxPrimaryPlace_EditButton");
+                        if (e)
+                            e.style.display = 'none';
+                    }</script>
+            </div>
+
+        </div>
+        <div id="_ctl0_cphRoblox_pUserStatistics">
+
+            <div id="UserStatisticsPane">
+
+
+                <div id="UserStatistics">
+                    <h4>Statistics</h4>
+                    <div class="Statistic">
+                        <div class="Label"><acronym title="The number of this user&#39;s friends.">Friends</acronym>:</div>
+                        <div class="Value">123 (4 last week)</div>
+                    </div>
+                    <div class="Statistic">
+                        <div class="Label"><acronym title="The number of posts this user has made to the Roblox forum.">Forum Posts</acronym>:</div>
+                        <div class="Value">116 (1 last week)</div>
+                    </div>
+                    <div class="Statistic">
+                        <div class="Label"><acronym title="The number of times this user&#39;s profile has been viewed.">Profile Views</acronym>:</div>
+                        <div class="Value">492 (78 last week)</div>
+                    </div>
+                    <div class="Statistic">
+                        <div class="Label"><acronym title="The number of times this user&#39;s place has been visited.">Place Visits</acronym>:</div>
+                        <div class="Value">103 (1 last week)</div>
+                    </div>
+                    <div class="Statistic">
+                        <div class="Label"><acronym title="The number of times this user&#39;s models have been viewed.">Model Views</acronym>:</div>
+                        <div class="Value">0 (0 last week)</div>
+                    </div>
+                    <div class="Statistic">
+                        <div class="Label"><acronym title="The number of times this user&#39;s character has destroyed another user&#39;s character in-game.">Kills</acronym>:</div>
+                        <div class="Value">0 (0 last week)</div>
+                    </div>
+                    <div class="Statistic">
+                        <div class="Label"><acronym title="The number of times this user&#39;s character has been destroyed in-game.">Deaths</acronym>:</div>
+                        <div class="Value">0 (0 last week)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="_ctl0_cphRoblox_pFriends">
+            <div id="FriendsPane">
+                <div id="Friends">
+                    <h4>@Model.Name's Friends <a href="https://web.archive.org/web/20061221185122/http://www.roblox.com/Friends.aspx?UserID=759">See all 123</a></h4>
+                    <table id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends" cellspacing="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="Friend">
+                                        <div class="Avatar"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl0_rbxContentImage" title="Jacobxxduel" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=1315" style="display:inline-block;cursor:hand;"><img src="./ROBLOX _ User_files/Model.ashx" border="0"></a></div>
+                                        <div class="Summary">
+                                            <span class="OnlineStatus"><img id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl0_iOnlineStatus" src="./ROBLOX _ User_files/OnlineStatusIndicator_IsOffline.gif" alt="Jacobxxduel is offline (last seen at 12/17/2006 9:38:04 PM)." border="0"></span>
+                                            <span class="Name"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl0_hlFriend" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=1315">Jacobxxduel</a></span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="Friend">
+                                        <div class="Avatar"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl1_rbxContentImage" title="Jacobxxbuild" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=2166" style="display:inline-block;cursor:hand;"><img src="./ROBLOX _ User_files/Model(1).ashx" border="0"></a></div>
+                                        <div class="Summary">
+                                            <span class="OnlineStatus"><img id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl1_iOnlineStatus" src="./ROBLOX _ User_files/OnlineStatusIndicator_IsOffline.gif" alt="Jacobxxbuild is offline (last seen at 11/14/2006 9:02:05 PM)." border="0"></span>
+                                            <span class="Name"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl1_hlFriend" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=2166">Jacobxxbuild</a></span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="Friend">
+                                        <div class="Avatar"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl2_rbxContentImage" title="doctorwho1216" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=418" style="display:inline-block;cursor:hand;"><img src="./ROBLOX _ User_files/Model(2).ashx" border="0"></a></div>
+                                        <div class="Summary">
+                                            <span class="OnlineStatus"><img id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl2_iOnlineStatus" src="./ROBLOX _ User_files/OnlineStatusIndicator_IsOffline.gif" alt="doctorwho1216 is offline (last seen at 12/6/2006 10:15:47 PM)." border="0"></span>
+                                            <span class="Name"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl2_hlFriend" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=418">doctorwho1216</a></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="Friend">
+                                        <div class="Avatar"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl3_rbxContentImage" title="whitechoc95" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=3301" style="display:inline-block;cursor:hand;"><img src="./ROBLOX _ User_files/Model(3).ashx" border="0"></a></div>
+                                        <div class="Summary">
+                                            <span class="OnlineStatus"><img id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl3_iOnlineStatus" src="./ROBLOX _ User_files/OnlineStatusIndicator_IsOffline.gif" alt="whitechoc95 is offline (last seen at 12/20/2006 1:39:55 PM)." border="0"></span>
+                                            <span class="Name"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl3_hlFriend" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=3301">whitechoc95</a></span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="Friend">
+                                        <div class="Avatar"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl4_rbxContentImage" title="Leeav" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=3417" style="display:inline-block;cursor:hand;"><img src="./ROBLOX _ User_files/Model(4).ashx" border="0"></a></div>
+                                        <div class="Summary">
+                                            <span class="OnlineStatus"><img id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl4_iOnlineStatus" src="./ROBLOX _ User_files/OnlineStatusIndicator_IsOffline.gif" alt="Leeav is offline (last seen at 12/20/2006 7:11:44 PM)." border="0"></span>
+                                            <span class="Name"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl4_hlFriend" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=3417">Leeav</a></span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="Friend">
+                                        <div class="Avatar"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl5_rbxContentImage" title="austin5555" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=4378" style="display:inline-block;cursor:hand;"><img src="./ROBLOX _ User_files/Model(5).ashx" border="0"></a></div>
+                                        <div class="Summary">
+                                            <span class="OnlineStatus"><img id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl5_iOnlineStatus" src="./ROBLOX _ User_files/OnlineStatusIndicator_IsOffline.gif" alt="austin5555 is offline (last seen at 10/12/2006 8:11:08 PM)." border="0"></span>
+                                            <span class="Name"><a id="_ctl0_cphRoblox_rbxFriendsPane_dlFriends__ctl5_hlFriend" href="https://web.archive.org/web/20061221185122/http://www.roblox.com/User.aspx?ID=4378">austin5555</a></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

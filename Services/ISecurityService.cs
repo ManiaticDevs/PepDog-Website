@@ -11,6 +11,7 @@ namespace PepDogWebsite.Services {
 		void SaveUserToDB(RegisterViewModel model);
 		bool IsValidUser(LoginViewModel model);
 		bool IsValidEmailAddress(string email);
-		List<Users> getUsersSet();
+		List<Users> GetUsersSet();
+		Users GetUserFromID(int ID);
 	}
 }

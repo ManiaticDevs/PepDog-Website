@@ -165,6 +165,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PepDogServerEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Users.cs">
       <DependentUpon>PepDogServerEntities.tt</DependentUpon>
     </Compile>
@@ -253,6 +254,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LayoutSecurity.cshtml" />
     <Content Include="Views\Home\Users.cshtml" />
+    <Content Include="Views\Home\User.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
