@@ -110,18 +110,13 @@
                         Works with your<br>Windows PC!
                     </div>
                 </div>
-                @if (Session == null) {
-
-                    <div id="DownloadAndPlay"><a href="/Security/Register/"><img src="~/Content/images/DownloadAndPlay.png" alt="FREE - Download and Play!" border="0"></a></div>
-                } else {
-                    if (Session["username"] != null) {
-                        <div id="DownloadAndPlay">
-                            <a href="/Security/Register/">
-                                <img src="~/Content/images/DownloadAndPlay.png" alt="FREE - Download and Play!" border="0">
-                            </a>
-                        </div>
+                <div id="DownloadAndPlay">
+                    @if (Session["username"] == null) {
+                        <a href="/Security/Register/">
+                            <img src="~/Content/images/DownloadAndPlay.png" alt="FREE - Download and Play!" border="0">
+                        </a>
                     }
-                }
+                </div>
 
             </div>
         </div>
